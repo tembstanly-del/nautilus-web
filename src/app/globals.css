@@ -14,9 +14,37 @@
 @layer base {
   :root {
     --background: 245 245 240;
-    /* #F5F5F0 */
+    /* #F5F5F0 - nautilus-sand */
     --foreground: 11 28 46;
-    /* #0B1C2E */
+    /* #0B1C2E - nautilus-deep */
+
+    /* shadcn/ui CSS variables mapped to Nautilus theme */
+    --card: 253 253 248;
+    /* #FDFDF8 - nautilus-cream */
+    --card-foreground: 11 28 46;
+    /* nautilus-deep */
+    --popover: 253 253 248;
+    --popover-foreground: 11 28 46;
+    --primary: 11 28 46;
+    /* nautilus-deep */
+    --primary-foreground: 245 245 240;
+    /* nautilus-sand */
+    --secondary: 20 61 78;
+    /* nautilus-teal */
+    --secondary-foreground: 245 245 240;
+    --muted: 245 245 240;
+    --muted-foreground: 20 61 78;
+    --accent: 212 175 55;
+    /* nautilus-gold */
+    --accent-foreground: 11 28 46;
+    --destructive: 220 38 38;
+    --destructive-foreground: 253 253 248;
+    --border: 20 61 78 / 0.2;
+    /* nautilus-teal with opacity */
+    --input: 20 61 78 / 0.2;
+    --ring: 212 175 55;
+    /* nautilus-gold */
+    --radius: 0.25rem;
   }
 
   body {
