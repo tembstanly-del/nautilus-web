@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
