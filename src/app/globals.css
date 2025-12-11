@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-nautilus-deep: #0B1C2E;
-  --color-nautilus-teal: #143D4E;
-  --color-nautilus-gold: #D4AF37;
-  --color-nautilus-sand: #F5F5F0;
-  --color-nautilus-cream: #FDFDF8;
+  /* Brand Guide Colors */
+  --color-nautilus-slate: #2D3A45;          /* Primary text, headers */
+  --color-nautilus-shell-primary: #7BA3BE;  /* Accents, highlights */
+  --color-nautilus-shell-deep: #5B8299;     /* Secondary accents */
+  --color-nautilus-shell-light: #C5D9E8;    /* Light accents */
+  --color-nautilus-shell-pale: #E8F1F5;     /* Subtle backgrounds */
+  --color-nautilus-cream: #FDFCFA;          /* Light backgrounds */
+  --color-nautilus-cream-dark: #F5F3F0;     /* Card backgrounds */
+  --color-nautilus-divider: #E8EEF2;        /* Lines, borders */
+  --color-nautilus-highlight: #E8B84A;      /* Offers, CTAs */
+
+  /* Legacy colors for gradual migration */
+  --color-nautilus-deep: #2D3A45;
+  --color-nautilus-teal: #5B8299;
+  --color-nautilus-gold: #E8B84A;
+  --color-nautilus-sand: #F5F3F0;
 
   --font-serif: var(--font-cormorant-garamond), serif;
   --font-sans: var(--font-inter), sans-serif;
@@ -13,14 +24,14 @@
 
 @layer base {
   :root {
-    --background: 245 245 240;
-    /* #F5F5F0 */
-    --foreground: 11 28 46;
-    /* #0B1C2E */
+    --background: 253 252 250;
+    /* #FDFCFA - Cream */
+    --foreground: 45 58 69;
+    /* #2D3A45 - Slate */
   }
 
   body {
-    @apply bg-nautilus-sand text-nautilus-deep;
+    @apply bg-nautilus-cream text-nautilus-slate;
   }
 
   /* Smooth scrolling for anchor links */
