@@ -2,6 +2,10 @@
 
 import { COMPANY } from "@/app/constants";
 import { Mail, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 export default function ContactForm() {
     return (
@@ -20,30 +24,34 @@ export default function ContactForm() {
                     <form action="https://formspree.io/f/tembstan.ly@gmail.com" method="POST" className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Name</label>
-                                <input
+                                <Label htmlFor="name">Name</Label>
+                                <Input
                                     type="text"
+                                    id="name"
                                     name="name"
                                     required
-                                    className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors"
                                     placeholder="Your Name"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Email</label>
-                                <input
+                                <Label htmlFor="email">Email</Label>
+                                <Input
                                     type="email"
+                                    id="email"
                                     name="email"
                                     required
-                                    className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors"
                                     placeholder="your@email.com"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="role" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">I am a...</label>
-                            <select name="role" className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors text-nautilus-slate/80">
+                            <Label htmlFor="role">I am a...</Label>
+                            <select
+                                id="role"
+                                name="role"
+                                className="flex h-11 w-full rounded-md border border-nautilus-shell-light/30 bg-nautilus-cream-dark/50 px-4 py-3 text-base text-nautilus-slate transition-all focus-visible:outline-none focus-visible:border-nautilus-shell-primary focus-visible:ring-2 focus-visible:ring-nautilus-shell-primary/20 md:text-sm"
+                            >
                                 <option value="student">Student needing research help</option>
                                 <option value="organization">Organization needing consultancy</option>
                                 <option value="other">Other</option>
@@ -51,19 +59,19 @@ export default function ContactForm() {
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Message</label>
-                            <textarea
+                            <Label htmlFor="message">Message</Label>
+                            <Textarea
+                                id="message"
                                 name="message"
                                 rows={4}
                                 required
-                                className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors resize-none"
                                 placeholder="Tell me about your project..."
-                            ></textarea>
+                            />
                         </div>
 
-                        <button type="submit" className="w-full bg-nautilus-shell-primary text-white font-serif text-lg py-4 hover:bg-nautilus-shell-deep transition-colors duration-300">
+                        <Button type="submit" size="lg" className="w-full font-serif text-lg">
                             Send Message
-                        </button>
+                        </Button>
                     </form>
 
                     <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 text-nautilus-slate/60 text-sm">

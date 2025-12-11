@@ -1,14 +1,60 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { COMPANY } from "@/app/constants";
+import { Button } from "@/components/ui/button";
+import { parallaxY } from "@/lib/gsap-animations";
 
 export default function HeroSection() {
+    const spiralRef = useRef<SVGSVGElement>(null);
+    const latinRef = useRef<HTMLHeadingElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const descRef = useRef<HTMLParagraphElement>(null);
+    const btnRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        // Parallax effect on spiral
+        if (spiralRef.current) {
+            parallaxY(spiralRef.current, -30);
+        }
+
+        // Animate content with GSAP
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                latinRef.current,
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.2 }
+            );
+
+            gsap.fromTo(
+                titleRef.current,
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.4 }
+            );
+
+            gsap.fromTo(
+                descRef.current,
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.8 }
+            );
+
+            gsap.fromTo(
+                btnRef.current,
+                { opacity: 0, scale: 0.9 },
+                { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)", delay: 1.2 }
+            );
+        });
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28">
             <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                 {/* Abstract Golden Ratio / Nautilus Spiral */}
                 <svg
+                    ref={spiralRef}
                     viewBox="0 0 1000 1000"
                     className="w-full h-full text-nautilus-shell-primary animate-[spin_120s_linear_infinite]"
                 >
@@ -37,43 +83,34 @@ export default function HeroSection() {
             </div>
 
             <div className="relative z-10 max-w-4xl w-full text-center space-y-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="space-y-4"
-                >
-                    <h2 className="text-nautilus-shell-deep font-serif text-xl md:text-2xl tracking-widest uppercase mb-4">
+                <div className="space-y-4">
+                    <h2 ref={latinRef} className="text-nautilus-shell-deep font-serif text-xl md:text-2xl tracking-widest uppercase mb-4 opacity-0">
                         {COMPANY.latinTagline}
                     </h2>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-nautilus-slate leading-tight">
+                    <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-nautilus-slate leading-tight opacity-0">
                         Structure. Wisdom. <br />
                         <span className="italic text-nautilus-shell-primary">Synthesis.</span>
                     </h1>
-                </motion.div>
+                </div>
 
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-lg md:text-xl text-nautilus-slate/70 max-w-2xl mx-auto font-sans font-light leading-relaxed"
+                <p
+                    ref={descRef}
+                    className="text-lg md:text-xl text-nautilus-slate/70 max-w-2xl mx-auto font-sans font-light leading-relaxed opacity-0"
                 >
                     {COMPANY.founder} presents {COMPANY.name}.
                     <br />
                     <span className="block mt-4 text-base md:text-lg">
                         We integrate research, analysis, and writing for those who need rigorous thinking across disciplines.
                     </span>
-                </motion.p>
+                </p>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                >
-                    <a href="#contact" className="inline-block bg-nautilus-shell-primary text-white px-8 py-3 rounded-full hover:bg-nautilus-shell-deep transition-colors duration-300 font-medium tracking-wide shadow-lg hover:shadow-xl">
-                        Begin the Conversation
-                    </a>
-                </motion.div>
+                <div ref={btnRef} className="opacity-0">
+                    <Button asChild size="lg">
+                        <a href="#contact">
+                            Begin the Conversation
+                        </a>
+                    </Button>
+                </div>
             </div>
         </section>
     );

@@ -1,44 +1,96 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { SERVICES } from "@/app/constants";
-import { motion } from "framer-motion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { drawLine, fadeInUp } from "@/lib/gsap-animations";
 
 export default function ServicesGrid() {
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const dividerRef = useRef<HTMLDivElement>(null);
+    const cardsRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Animate title
+            fadeInUp(titleRef.current);
+
+            // Animate divider
+            if (dividerRef.current) {
+                drawLine(dividerRef.current, 1.2);
+            }
+
+            // Stagger animate service cards
+            if (cardsRef.current) {
+                const cards = cardsRef.current.querySelectorAll("[data-service-card]");
+                gsap.fromTo(
+                    cards,
+                    {
+                        opacity: 0,
+                        y: 60,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.2,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: cardsRef.current,
+                            start: "top 75%",
+                            toggleActions: "play none none none",
+                        },
+                    }
+                );
+            }
+        });
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <section id="services" className="py-24 px-6 bg-nautilus-shell-pale relative overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4">
+                    <h2
+                        ref={titleRef}
+                        className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4"
+                    >
                         Integrated Expertise
                     </h2>
-                    <div className="w-24 h-1 bg-nautilus-shell-primary mx-auto" />
+                    <div
+                        ref={dividerRef}
+                        className="w-24 h-1 bg-nautilus-shell-primary mx-auto origin-left"
+                    />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    {SERVICES.map((service, idx) => (
-                        <motion.div
+                <div ref={cardsRef} className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    {SERVICES.map((service) => (
+                        <Card
                             key={service.target}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.2 }}
-                            className="bg-white p-8 md:p-12 shadow-sm border-t-4 border-nautilus-shell-light hover:border-nautilus-shell-primary transition-colors duration-500 group"
+                            data-service-card
+                            className="border-t-4 border-nautilus-shell-light hover:border-nautilus-shell-primary transition-all duration-500 opacity-0 group"
                         >
-                            <h3 className="text-2xl font-serif text-nautilus-shell-deep mb-6 group-hover:text-nautilus-slate transition-colors">
-                                For {service.target}
-                            </h3>
-                            <blockquote className="text-lg italic text-nautilus-slate/70 mb-8 border-l-2 border-nautilus-shell-primary pl-4 font-serif">
-                                "{service.quote}"
-                            </blockquote>
-                            <ul className="space-y-3">
-                                {service.items.map((item) => (
-                                    <li key={item} className="flex items-start text-nautilus-slate/80">
-                                        <span className="w-1.5 h-1.5 bg-nautilus-shell-primary rounded-full mr-3 mt-2 flex-shrink-0" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
+                            <CardHeader>
+                                <CardTitle className="text-nautilus-shell-deep group-hover:text-nautilus-slate transition-colors">
+                                    For {service.target}
+                                </CardTitle>
+                                <CardDescription className="text-lg italic text-nautilus-slate/70 border-l-2 border-nautilus-shell-primary pl-4 font-serif mt-4">
+                                    &ldquo;{service.quote}&rdquo;
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="space-y-3">
+                                    {service.items.map((item) => (
+                                        <li key={item} className="flex items-start text-nautilus-slate/80">
+                                            <span className="w-1.5 h-1.5 bg-nautilus-shell-primary rounded-full mr-3 mt-2 flex-shrink-0" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </div>
