@@ -1,0 +1,50 @@
+<svg width="400" height="140" viewBox="0 0 400 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Watercolor-style nautilus shell -->
+  <g opacity="0.9">
+    <!-- Outer chamber - lightest -->
+    <path d="M60 50 Q80 30, 90 45 Q95 55, 85 65 Q75 75, 60 70 Q50 65, 55 55 Q58 48, 60 50 Z"
+          fill="#C5D9E8" opacity="0.8"/>
+
+    <!-- Mid chambers -->
+    <path d="M65 52 Q75 40, 82 50 Q86 58, 78 65 Q70 70, 63 65 Q58 60, 62 54 Q64 51, 65 52 Z"
+          fill="#7BA3BE" opacity="0.7"/>
+
+    <path d="M68 54 Q73 46, 78 53 Q81 59, 76 64 Q71 68, 67 63 Q63 58, 66 55 Q67 53, 68 54 Z"
+          fill="#5B8299" opacity="0.8"/>
+
+    <!-- Inner chambers - darkest -->
+    <path d="M70 56 Q73 50, 76 55 Q78 60, 74 63 Q70 65, 68 61 Q66 57, 69 56.5 Q69.5 56, 70 56 Z"
+          fill="#4A7085" opacity="0.9"/>
+
+    <!-- Center spiral -->
+    <circle cx="71" cy="59" r="3" fill="#2D3A45" opacity="0.6"/>
+
+    <!-- Flowing tail -->
+    <path d="M55 65 Q40 70, 30 80 Q25 85, 22 88"
+          stroke="#7BA3BE" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M56 67 Q42 72, 32 82"
+          stroke="#5B8299" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Chamber lines -->
+    <path d="M60 50 Q70 45, 85 52" stroke="#4A7085" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M58 55 Q68 48, 82 56" stroke="#4A7085" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M60 60 Q68 52, 80 60" stroke="#4A7085" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M62 65 Q68 56, 77 63" stroke="#4A7085" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M65 68 Q69 60, 75 66" stroke="#4A7085" stroke-width="0.8" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- NAUTILUS text -->
+  <text x="120" y="55" font-family="Cormorant Garamond, serif" font-size="36" font-weight="400"
+        fill="#2D3A45" letter-spacing="4">
+    NAUTILUS
+  </text>
+
+  <!-- Tagline -->
+  <text x="120" y="80" font-family="Inter, sans-serif" font-size="12" font-weight="300"
+        fill="#5B8299" letter-spacing="3" opacity="0.85">
+    POLYMATHS &amp; GENERALISTS
+  </text>
+
+  <!-- Optional decorative element -->
+  <line x1="120" y1="90" x2="380" y2="90" stroke="#7BA3BE" stroke-width="0.5" opacity="0.3"/>
+</svg>

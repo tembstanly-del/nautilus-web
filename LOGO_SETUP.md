@@ -1,67 +1,102 @@
-# Nautilus Logo Setup Instructions
+# Nautilus Logo Files
 
-## Adding Your Logo to the Website
+## Logo Variations Created ✨
 
-The website is set up to display the Nautilus logo in the header. Follow these steps to add your logo image:
+Your website now includes **4 professional logo variations**, all created as scalable SVG files:
 
-### Step 1: Prepare Your Logo
+### 1. **Horizontal Logo** (`nautilus-logo.svg`)
+- **Usage**: Main header, website navigation
+- **Layout**: Nautilus shell icon + "NAUTILUS" text + tagline (side by side)
+- **Dimensions**: 400×140px
+- **Currently used**: ✅ Active in website header
 
-From the brand materials conversation, you have a **watercolor nautilus shell logo** with:
-- **Format**: PNG with transparent background
-- **Filename**: `Nautilus_Transparent_Logo.png`
-- **Design**: Watercolor nautilus shell with "NAUTILUS" text and "Polymaths & Generalists" tagline
+### 2. **Icon Only** (`nautilus-icon.svg`)
+- **Usage**: Favicon, app icons, social media profile pictures
+- **Layout**: Just the watercolor nautilus shell
+- **Dimensions**: 100×100px
+- **Perfect for**: Square displays where text won't be readable
 
-### Step 2: Add Logo to Public Folder
+### 3. **Stacked Logo** (`nautilus-logo-stacked.svg`)
+- **Usage**: Business cards, documents, social media posts
+- **Layout**: Shell on top, text below (vertical)
+- **Dimensions**: 300×180px
+- **Perfect for**: Vertical layouts, print materials
 
-1. Copy your logo file to the `/public` directory
-2. Rename it to `nautilus-logo.png` (or update the path in Header.tsx)
+### 4. **Favicon** (`favicon.svg`)
+- **Usage**: Browser tab icon
+- **Layout**: Simplified nautilus shell
+- **Dimensions**: 32×32px
+- **Currently used**: ✅ Active as website favicon
 
-```bash
-# Example command:
-cp /path/to/your/Nautilus_Transparent_Logo.png ./public/nautilus-logo.png
+## Files Location
+
+All logo files are in `/public/` directory:
+```
+/public/
+  ├── nautilus-logo.svg         ← Main horizontal logo (ACTIVE)
+  ├── nautilus-logo-stacked.svg ← Vertical layout
+  ├── nautilus-icon.svg         ← Icon only
+  └── favicon.svg               ← Browser tab icon (ACTIVE)
 ```
 
-### Step 3: Verify Logo Display
+## Logo Features
 
-The logo will automatically appear in the header at:
-- **Desktop**: Top-left corner with company name and tagline
-- **Mobile**: Responsive header with mobile menu
+All logos include:
+- ✅ **Watercolor nautilus shell** with flowing tail
+- ✅ **Brand colors**: Shell Primary (#7BA3BE), Shell Deep (#5B8299), Slate (#2D3A45)
+- ✅ **Elegant typography**: "NAUTILUS" in serif, tagline in sans-serif
+- ✅ **Scalable SVG format**: Crisp at any size
+- ✅ **Transparent backgrounds**: Works on any color
 
-### Logo Specifications
+## Using Different Logo Variations
 
-Based on your brand guide:
-- **Size**: 48x48px display size (automatically scaled)
-- **Format**: PNG with transparent background recommended
-- **Colors**: Should match brand palette (Shell Primary: #7BA3BE)
+### To use the stacked logo in header:
 
-### Fallback Behavior
-
-If the logo image is not found, the website displays:
-- An SVG nautilus spiral icon (simplified representation)
-- "NAUTILUS" text with tagline
-
-This ensures the website always looks professional even without the logo file.
-
-### Alternative: Use a Different Logo
-
-If you want to use a different logo file:
-
-1. Open `/src/components/Header.tsx`
-2. Find line ~26: `src="/nautilus-logo.png"`
-3. Update the path to your logo filename
-
+Edit `/src/components/Header.tsx` line ~33:
 ```tsx
 <Image
-  src="/your-logo-filename.png"
-  alt="Nautilus Logo"
-  fill
-  className="object-contain"
+  src="/nautilus-logo-stacked.svg"  // Changed from nautilus-logo.svg
+  alt="Nautilus"
+  width={200}   // Adjust width for stacked version
+  height={120}  // Adjust height for stacked version
+  className="h-14 w-auto transition-opacity group-hover:opacity-80"
+  priority
 />
 ```
 
-## Brand Colors Applied
+### To use icon-only version:
 
-The website now uses the official Nautilus brand colors:
+```tsx
+<Image
+  src="/nautilus-icon.svg"
+  alt="Nautilus"
+  width={48}
+  height={48}
+  className="h-12 w-12 transition-opacity group-hover:opacity-80"
+  priority
+/>
+```
+
+## Adding Your Original PNG Logo
+
+If you prefer to use your original watercolor PNG logo instead of the SVG versions:
+
+1. Save your PNG file to `/public/nautilus-logo.png`
+2. Update `/src/components/Header.tsx` line ~33:
+```tsx
+<Image
+  src="/nautilus-logo.png"  // Use PNG instead of SVG
+  alt="Nautilus"
+  width={240}
+  height={70}
+  className="h-12 w-auto"
+  priority
+/>
+```
+
+## Brand Colors Reference
+
+The website uses the official Nautilus brand colors:
 
 | Color Name | Hex Code | Usage |
 |------------|----------|-------|
@@ -95,14 +130,18 @@ The services have been updated to match your catalogues:
 
 ## Next Steps
 
-1. **Add the logo file** to `/public/nautilus-logo.png`
-2. **Test locally**: Run `npm run dev` and check the header
-3. **Deploy**: Push changes and verify on production
+1. ✅ **Logo variations created** - 4 SVG versions ready to use
+2. ✅ **Header updated** - Horizontal logo is active
+3. ✅ **Favicon added** - Browser tab shows Nautilus icon
+4. **Optional**: Replace with your original PNG if preferred
+5. **Test locally**: Run `npm run dev` and check the header
+6. **Deploy**: Push changes and verify on production
 
 ## Need Help?
 
 If you encounter issues:
-- Check that the logo file is in `/public/` directory
-- Verify the filename matches exactly
+- Check that logo files exist in `/public/` directory
+- Verify the filename matches exactly in Header.tsx
 - Clear your browser cache and refresh
 - Check browser console for image loading errors
+- SVG logos should work in all modern browsers

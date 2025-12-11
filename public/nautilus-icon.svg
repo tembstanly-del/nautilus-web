@@ -1,0 +1,35 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon-only version - Just the nautilus shell -->
+  <g transform="translate(10, 15)">
+    <!-- Outer chamber - lightest -->
+    <path d="M30 20 Q50 0, 60 15 Q65 25, 55 35 Q45 45, 30 40 Q20 35, 25 25 Q28 18, 30 20 Z"
+          fill="#C5D9E8" opacity="0.8"/>
+
+    <!-- Mid chambers -->
+    <path d="M35 22 Q45 10, 52 20 Q56 28, 48 35 Q40 40, 33 35 Q28 30, 32 24 Q34 21, 35 22 Z"
+          fill="#7BA3BE" opacity="0.7"/>
+
+    <path d="M38 24 Q43 16, 48 23 Q51 29, 46 34 Q41 38, 37 33 Q33 28, 36 25 Q37 23, 38 24 Z"
+          fill="#5B8299" opacity="0.8"/>
+
+    <!-- Inner chambers - darkest -->
+    <path d="M40 26 Q43 20, 46 25 Q48 30, 44 33 Q40 35, 38 31 Q36 27, 39 26.5 Q39.5 26, 40 26 Z"
+          fill="#4A7085" opacity="0.9"/>
+
+    <!-- Center spiral -->
+    <circle cx="41" cy="29" r="3" fill="#2D3A45" opacity="0.6"/>
+
+    <!-- Flowing tail -->
+    <path d="M25 35 Q10 40, 0 50 Q-5 55, -8 58"
+          stroke="#7BA3BE" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M26 37 Q12 42, 2 52"
+          stroke="#5B8299" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Chamber lines -->
+    <path d="M30 20 Q40 15, 55 22" stroke="#4A7085" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M28 25 Q38 18, 52 26" stroke="#4A7085" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M30 30 Q38 22, 50 30" stroke="#4A7085" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M32 35 Q38 26, 47 33" stroke="#4A7085" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M35 38 Q39 30, 45 36" stroke="#4A7085" stroke-width="1" fill="none" opacity="0.5"/>
+  </g>
+</svg>

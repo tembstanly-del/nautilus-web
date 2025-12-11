@@ -28,51 +28,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12">
-              {/* Placeholder for logo image - will be replaced with actual logo */}
-              <Image
-                src="/nautilus-logo.png"
-                alt="Nautilus Logo"
-                fill
-                className="object-contain"
-                onError={(e) => {
-                  // Fallback to SVG if image doesn't exist
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = "none";
-                }}
-              />
-              {/* SVG Fallback - Simplified nautilus spiral */}
-              <svg
-                viewBox="0 0 100 100"
-                className="w-full h-full text-nautilus-shell-primary"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  d="M50,50 m-40,0 a40,40 0 1,1 80,0"
-                  className="opacity-30"
-                />
-                <path
-                  d="M50,50 m-25,0 a25,25 0 1,1 50,0"
-                  className="opacity-50"
-                />
-                <path
-                  d="M50,50 m-15,0 a15,15 0 1,1 30,0"
-                  className="opacity-70"
-                />
-                <circle cx="50" cy="50" r="5" fill="currentColor" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-serif font-semibold text-nautilus-slate group-hover:text-nautilus-shell-primary transition-colors">
-                NAUTILUS
-              </span>
-              <span className="text-xs text-nautilus-slate/60 tracking-wider uppercase">
-                {COMPANY.tagline}
-              </span>
-            </div>
+          <a href="#" className="flex items-center group">
+            <Image
+              src="/nautilus-logo.svg"
+              alt="Nautilus"
+              width={240}
+              height={70}
+              className="h-12 w-auto transition-opacity group-hover:opacity-80"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
