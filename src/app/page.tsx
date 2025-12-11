@@ -6,13 +6,13 @@ import { COMPANY } from "@/app/constants";
 
 export default function Home() {
   return (
-    <main className="bg-nautilus-sand min-h-screen">
+    <main className="bg-nautilus-cream min-h-screen">
       <HeroSection />
       <ServicesGrid />
       <ValueProp />
       <ContactForm />
 
-      <footer className="py-8 text-center text-nautilus-deep/40 text-sm font-sans border-t border-nautilus-deep/5 mx-6 mt-12">
+      <footer className="py-8 text-center text-nautilus-slate/40 text-sm font-sans border-t border-nautilus-slate/10 mx-6 mt-12">
         &copy; {new Date().getFullYear()} {COMPANY.name}. {COMPANY.location}.
       </footer>
     </main>
