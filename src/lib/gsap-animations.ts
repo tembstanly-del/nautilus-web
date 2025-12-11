@@ -9,7 +9,7 @@ if (typeof window !== "undefined") {
 /**
  * Fade in animation with scroll trigger
  */
-export const fadeInUp = (element: HTMLElement | null, delay: number = 0) => {
+export const fadeInUp = (element: Element | null, delay: number = 0) => {
   if (!element) return null;
 
   return gsap.fromTo(
@@ -37,7 +37,7 @@ export const fadeInUp = (element: HTMLElement | null, delay: number = 0) => {
  * Stagger animation for lists/grids
  */
 export const staggerFadeIn = (
-  elements: HTMLElement[] | NodeListOf<Element>,
+  elements: Element[] | NodeListOf<Element>,
   stagger: number = 0.15
 ) => {
   if (!elements || elements.length === 0) return null;
@@ -67,7 +67,7 @@ export const staggerFadeIn = (
  * Parallax effect
  */
 export const parallaxY = (
-  element: HTMLElement | null,
+  element: Element | null,
   yPercent: number = -20
 ) => {
   if (!element) return null;
@@ -87,7 +87,7 @@ export const parallaxY = (
 /**
  * Scale in animation
  */
-export const scaleIn = (element: HTMLElement | null, delay: number = 0) => {
+export const scaleIn = (element: Element | null, delay: number = 0) => {
   if (!element) return null;
 
   return gsap.fromTo(
@@ -114,7 +114,7 @@ export const scaleIn = (element: HTMLElement | null, delay: number = 0) => {
 /**
  * Draw line animation (for SVG paths or dividers)
  */
-export const drawLine = (element: HTMLElement | null, duration: number = 1) => {
+export const drawLine = (element: Element | null, duration: number = 1) => {
   if (!element) return null;
 
   return gsap.fromTo(
@@ -138,7 +138,7 @@ export const drawLine = (element: HTMLElement | null, duration: number = 1) => {
 /**
  * Rotate in animation
  */
-export const rotateIn = (element: HTMLElement | null, delay: number = 0) => {
+export const rotateIn = (element: Element | null, delay: number = 0) => {
   if (!element) return null;
 
   return gsap.fromTo(
