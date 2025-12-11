@@ -89,7 +89,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+        <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28">
             <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                 {/* Abstract Golden Ratio / Nautilus Spiral */}
                 <svg
@@ -108,14 +108,14 @@ export default function HeroSection() {
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="1"
-                        d="M500,500 m0,-250 a250,250 0 1,1 0,500 a250,250 0 1,1 0,-500"
+                        d="M500,500 m-250,0 a250,250 0 1,1 500,0 a250,250 0 1,1 -500,0"
                         className="opacity-40"
                     />
                     <path
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="1"
-                        d="M500,500 m0,-150 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"
+                        d="M500,500 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"
                         className="opacity-60"
                     />
                 </svg>

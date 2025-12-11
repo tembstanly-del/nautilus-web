@@ -134,7 +134,7 @@ export default function ValueProp() {
                                     <h3 className="text-xl font-serif text-nautilus-cream mb-1">
                                         {reason.title}
                                     </h3>
-                                    <p className="text-nautilus-sand/60 text-sm font-light">
+                                    <p className="text-white/70 text-sm font-light">
                                         {reason.desc}
                                     </p>
                                 </div>

@@ -63,98 +63,78 @@ export default function ContactForm() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="contact" className="py-24 px-6 bg-nautilus-sand">
+        <section id="contact" className="py-24 px-6 bg-nautilus-cream">
             <div className="max-w-4xl mx-auto">
-                <div ref={headingRef} className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif text-nautilus-deep mb-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4">
                         Start the Conversation
                     </h2>
-                    <p className="text-nautilus-teal/70 font-light">
+                    <p className="text-nautilus-shell-deep/70 font-light">
                         Whether for academic guidance or organizational strategy.
                     </p>
                 </div>
 
-                <Card ref={formRef} className="p-8 md:p-12 border-nautilus-deep/10">
-                    <CardContent className="p-0">
-                        <form action="https://formspree.io/f/tembstan.ly@gmail.com" method="POST" className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <Label htmlFor="name" className="text-sm font-medium text-nautilus-deep uppercase tracking-wider">
-                                        Name
-                                    </Label>
-                                    <Input
-                                        id="name"
-                                        type="text"
-                                        name="name"
-                                        required
-                                        className="bg-nautilus-sand/50 border-b border-nautilus-deep/20 focus:border-nautilus-gold rounded-none border-t-0 border-x-0"
-                                        placeholder="Your Name"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="email" className="text-sm font-medium text-nautilus-deep uppercase tracking-wider">
-                                        Email
-                                    </Label>
-                                    <Input
-                                        id="email"
-                                        type="email"
-                                        name="email"
-                                        required
-                                        className="bg-nautilus-sand/50 border-b border-nautilus-deep/20 focus:border-nautilus-gold rounded-none border-t-0 border-x-0"
-                                        placeholder="your@email.com"
-                                    />
-                                </div>
-                            </div>
-
+                <div className="bg-white p-8 md:p-12 shadow-sm border border-nautilus-slate/5 rounded-sm">
+                    <form action="https://formspree.io/f/tembstan.ly@gmail.com" method="POST" className="space-y-6">
+                        <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <Label htmlFor="role" className="text-sm font-medium text-nautilus-deep uppercase tracking-wider">
-                                    I am a...
-                                </Label>
-                                <select
-                                    id="role"
-                                    name="role"
-                                    className="flex h-9 w-full rounded-md border border-input bg-nautilus-sand/50 px-3 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                                >
-                                    <option value="student">Student needing research help</option>
-                                    <option value="organization">Organization needing consultancy</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <div className="space-y-2">
-                                <Label htmlFor="message" className="text-sm font-medium text-nautilus-deep uppercase tracking-wider">
-                                    Message
-                                </Label>
-                                <Textarea
-                                    id="message"
-                                    name="message"
-                                    rows={4}
+                                <label htmlFor="name" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
                                     required
-                                    className="bg-nautilus-sand/50 border-nautilus-deep/20 focus:border-nautilus-gold resize-none"
-                                    placeholder="Tell me about your project..."
+                                    className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors"
+                                    placeholder="Your Name"
                                 />
                             </div>
 
-                            <Button
-                                type="submit"
-                                className="w-full bg-nautilus-deep text-nautilus-sand font-serif text-lg py-6 hover:bg-nautilus-teal transition-colors duration-300"
-                            >
-                                Send Message
-                            </Button>
-                        </form>
+                            <div className="space-y-2">
+                                <label htmlFor="email" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors"
+                                    placeholder="your@email.com"
+                                />
+                            </div>
 
-                        <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 text-nautilus-deep/60 text-sm">
-                            <a href={`mailto:${COMPANY.contact.email}`} className="flex items-center hover:text-nautilus-gold transition-colors">
-                                <Mail className="w-4 h-4 mr-2" />
-                                {COMPANY.contact.email}
-                            </a>
-                            <a href={COMPANY.contact.whatsappLink} className="flex items-center hover:text-nautilus-gold transition-colors">
-                                <MessageSquare className="w-4 h-4 mr-2" />
-                                WhatsApp: {COMPANY.contact.whatsapp}
-                            </a>
+                        <div className="space-y-2">
+                            <label htmlFor="role" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">I am a...</label>
+                            <select name="role" className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors text-nautilus-slate/80">
+                                <option value="student">Student needing research help</option>
+                                <option value="organization">Organization needing consultancy</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                    </CardContent>
-                </Card>
+
+                        <div className="space-y-2">
+                            <label htmlFor="message" className="text-sm font-medium text-nautilus-slate uppercase tracking-wider">Message</label>
+                            <textarea
+                                name="message"
+                                rows={4}
+                                required
+                                className="w-full bg-nautilus-cream-dark/50 border-b border-nautilus-slate/20 px-4 py-3 focus:outline-none focus:border-nautilus-shell-primary transition-colors resize-none"
+                                placeholder="Tell me about your project..."
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" className="w-full bg-nautilus-shell-primary text-white font-serif text-lg py-4 hover:bg-nautilus-shell-deep transition-colors duration-300">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 text-nautilus-slate/60 text-sm">
+                        <a href={`mailto:${COMPANY.contact.email}`} className="flex items-center hover:text-nautilus-shell-primary transition-colors">
+                            <Mail className="w-4 h-4 mr-2" />
+                            {COMPANY.contact.email}
+                        </a>
+                        <a href={COMPANY.contact.whatsappLink} className="flex items-center hover:text-nautilus-shell-primary transition-colors">
+                            <MessageSquare className="w-4 h-4 mr-2" />
+                            WhatsApp: {COMPANY.contact.whatsapp}
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     );

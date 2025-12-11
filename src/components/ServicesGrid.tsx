@@ -49,10 +49,10 @@ export default function ServicesGrid() {
         <section ref={sectionRef} className="py-24 px-6 bg-nautilus-cream relative overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif text-nautilus-deep mb-4">
+                    <h2 className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4">
                         Integrated Expertise
                     </h2>
-                    <div className="w-24 h-1 bg-nautilus-gold mx-auto" />
+                    <div className="w-24 h-1 bg-nautilus-shell-primary mx-auto" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">

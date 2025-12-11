@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-nautilus-deep: #0B1C2E;
-  --color-nautilus-teal: #143D4E;
-  --color-nautilus-gold: #D4AF37;
-  --color-nautilus-sand: #F5F5F0;
-  --color-nautilus-cream: #FDFDF8;
+  /* Brand Guide Colors */
+  --color-nautilus-slate: #2D3A45;          /* Primary text, headers */
+  --color-nautilus-shell-primary: #7BA3BE;  /* Accents, highlights */
+  --color-nautilus-shell-deep: #5B8299;     /* Secondary accents */
+  --color-nautilus-shell-light: #C5D9E8;    /* Light accents */
+  --color-nautilus-shell-pale: #E8F1F5;     /* Subtle backgrounds */
+  --color-nautilus-cream: #FDFCFA;          /* Light backgrounds */
+  --color-nautilus-cream-dark: #F5F3F0;     /* Card backgrounds */
+  --color-nautilus-divider: #E8EEF2;        /* Lines, borders */
+  --color-nautilus-highlight: #E8B84A;      /* Offers, CTAs */
+
+  /* Legacy colors for gradual migration */
+  --color-nautilus-deep: #2D3A45;
+  --color-nautilus-teal: #5B8299;
+  --color-nautilus-gold: #E8B84A;
+  --color-nautilus-sand: #F5F3F0;
 
   --font-serif: var(--font-cormorant-garamond), serif;
   --font-sans: var(--font-inter), sans-serif;
@@ -13,42 +24,14 @@
 
 @layer base {
   :root {
-    --background: 245 245 240;
-    /* #F5F5F0 - nautilus-sand */
-    --foreground: 11 28 46;
-    /* #0B1C2E - nautilus-deep */
-
-    /* shadcn/ui CSS variables mapped to Nautilus theme */
-    --card: 253 253 248;
-    /* #FDFDF8 - nautilus-cream */
-    --card-foreground: 11 28 46;
-    /* nautilus-deep */
-    --popover: 253 253 248;
-    --popover-foreground: 11 28 46;
-    --primary: 11 28 46;
-    /* nautilus-deep */
-    --primary-foreground: 245 245 240;
-    /* nautilus-sand */
-    --secondary: 20 61 78;
-    /* nautilus-teal */
-    --secondary-foreground: 245 245 240;
-    --muted: 245 245 240;
-    --muted-foreground: 20 61 78;
-    --accent: 212 175 55;
-    /* nautilus-gold */
-    --accent-foreground: 11 28 46;
-    --destructive: 220 38 38;
-    --destructive-foreground: 253 253 248;
-    --border: 20 61 78 / 0.2;
-    /* nautilus-teal with opacity */
-    --input: 20 61 78 / 0.2;
-    --ring: 212 175 55;
-    /* nautilus-gold */
-    --radius: 0.25rem;
+    --background: 253 252 250;
+    /* #FDFCFA - Cream */
+    --foreground: 45 58 69;
+    /* #2D3A45 - Slate */
   }
 
   body {
-    @apply bg-nautilus-sand text-nautilus-deep;
+    @apply bg-nautilus-cream text-nautilus-slate;
   }
 
   /* Smooth scrolling for anchor links */
