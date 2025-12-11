@@ -104,13 +104,21 @@ export default function HeroSection() {
                     </span>
                 </p>
 
-                <div ref={btnRef} className="opacity-0">
+                <div ref={btnRef} className="flex flex-col sm:flex-row gap-4 justify-center opacity-0">
                     <Button asChild size="lg">
                         <a href="#contact">
-                            Begin the Conversation
+                            Get Started Free
+                        </a>
+                    </Button>
+                    <Button asChild size="lg" variant="outline">
+                        <a href="#services">
+                            View Services
                         </a>
                     </Button>
                 </div>
+                <p className="text-sm text-nautilus-slate/60 mt-4">
+                    ✨ Free 15-minute consultation • No obligation
+                </p>
             </div>
         </section>
     );

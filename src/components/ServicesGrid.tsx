@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { SERVICES } from "@/app/constants";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { drawLine, fadeInUp } from "@/lib/gsap-animations";
+import { GraduationCap, Building2 } from "lucide-react";
 
 export default function ServicesGrid() {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -66,20 +67,27 @@ export default function ServicesGrid() {
                 </div>
 
                 <div ref={cardsRef} className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    {SERVICES.map((service) => (
-                        <Card
-                            key={service.target}
-                            data-service-card
-                            className="border-t-4 border-nautilus-shell-light hover:border-nautilus-shell-primary transition-all duration-500 opacity-0 group"
-                        >
-                            <CardHeader>
-                                <CardTitle className="text-nautilus-shell-deep group-hover:text-nautilus-slate transition-colors">
-                                    For {service.target}
-                                </CardTitle>
-                                <CardDescription className="text-lg italic text-nautilus-slate/70 border-l-2 border-nautilus-shell-primary pl-4 font-serif mt-4">
-                                    &ldquo;{service.quote}&rdquo;
-                                </CardDescription>
-                            </CardHeader>
+                    {SERVICES.map((service) => {
+                        const Icon = service.target === "Students" ? GraduationCap : Building2;
+                        return (
+                            <Card
+                                key={service.target}
+                                data-service-card
+                                className="border-t-4 border-nautilus-shell-light hover:border-nautilus-shell-primary transition-all duration-500 opacity-0 group"
+                            >
+                                <CardHeader>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="w-12 h-12 rounded-full bg-nautilus-shell-pale flex items-center justify-center group-hover:bg-nautilus-shell-primary group-hover:text-white transition-all duration-300">
+                                            <Icon className="w-6 h-6 text-nautilus-shell-primary group-hover:text-white transition-colors" />
+                                        </div>
+                                        <CardTitle className="text-nautilus-shell-deep group-hover:text-nautilus-slate transition-colors">
+                                            For {service.target}
+                                        </CardTitle>
+                                    </div>
+                                    <CardDescription className="text-lg italic text-nautilus-slate/70 border-l-2 border-nautilus-shell-primary pl-4 font-serif mt-4">
+                                        &ldquo;{service.quote}&rdquo;
+                                    </CardDescription>
+                                </CardHeader>
                             <CardContent>
                                 <ul className="space-y-3">
                                     {service.items.map((item) => (
@@ -91,7 +99,8 @@ export default function ServicesGrid() {
                                 </ul>
                             </CardContent>
                         </Card>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>
