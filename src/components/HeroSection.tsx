@@ -97,10 +97,10 @@ export default function HeroSection() {
                     ref={descRef}
                     className="text-lg md:text-xl text-nautilus-slate/70 max-w-2xl mx-auto font-sans font-light leading-relaxed opacity-0"
                 >
-                    {COMPANY.founder} presents {COMPANY.name}.
+                    Expert research consultancy integrating analysis, methodology, and academic writing.
                     <br />
                     <span className="block mt-4 text-base md:text-lg">
-                        We integrate research, analysis, and writing for those who need rigorous thinking across disciplines.
+                        Rigorous thinking across disciplines for students and professionals who demand excellence.
                     </span>
                 </p>
 

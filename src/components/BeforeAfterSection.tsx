@@ -48,7 +48,7 @@ const examples = [
         "3-year sustainability strategy",
       ],
     },
-    result: "$50K grant approved on first submission",
+    result: "Grant proposal approved on first submission",
   },
 ];
 

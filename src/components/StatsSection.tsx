@@ -10,14 +10,14 @@ const stats = [
     description: "Thesis, proposals, and research studies",
   },
   {
-    number: "5+",
+    number: "2+",
     label: "Years Experience",
     description: "In research and consultancy",
   },
   {
     number: "30+",
     label: "Happy Clients",
-    description: "Students and organizations",
+    description: "Students across multiple disciplines",
   },
   {
     number: "95%",

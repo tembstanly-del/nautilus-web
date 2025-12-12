@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { COMPANY } from "@/app/constants";
-import { Mail, MessageSquare, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MessageSquare, CheckCircle, AlertCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,18 +44,18 @@ export default function ContactForm() {
     };
 
     return (
-        <section id="contact" className="py-24 px-6 bg-nautilus-cream">
+        <section id="contact" className="py-24 px-6 bg-gradient-to-br from-nautilus-cream via-nautilus-shell-pale/20 to-nautilus-cream">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4">
                         Start the Conversation
                     </h2>
-                    <p className="text-nautilus-shell-deep/70 font-light">
-                        Whether for academic guidance or organizational strategy.
+                    <p className="text-nautilus-shell-deep/70 font-light text-lg">
+                        Get expert research guidance tailored to your academic needs
                     </p>
                 </div>
 
-                <div className="bg-white p-8 md:p-12 shadow-sm border border-nautilus-slate/5 rounded-sm">
+                <div className="bg-white p-8 md:p-12 shadow-xl border border-nautilus-shell-light/30 rounded-2xl">
                     {submitStatus === "success" && (
                         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md flex items-start gap-3">
                             <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -110,8 +110,10 @@ export default function ContactForm() {
                                 disabled={isSubmitting}
                                 className="flex h-11 w-full rounded-md border border-nautilus-shell-light/30 bg-nautilus-cream-dark/50 px-4 py-3 text-base text-nautilus-slate transition-all focus-visible:outline-none focus-visible:border-nautilus-shell-primary focus-visible:ring-2 focus-visible:ring-nautilus-shell-primary/20 md:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <option value="student">Student needing research help</option>
-                                <option value="organization">Organization needing consultancy</option>
+                                <option value="bpharm">BPharm Student</option>
+                                <option value="mbchb">MBChB Student</option>
+                                <option value="masters">Masters Student</option>
+                                <option value="undergraduate">Other Undergraduate</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -131,28 +133,29 @@ export default function ContactForm() {
                         <Button
                             type="submit"
                             size="lg"
-                            className="w-full font-serif text-lg"
+                            className="w-full font-serif text-lg group"
                             disabled={isSubmitting}
                         >
+                            <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
                             {isSubmitting ? "Sending..." : "Send Message"}
                         </Button>
                     </form>
 
                     <div className="mt-12 pt-8 border-t border-nautilus-divider">
-                        <p className="text-center text-sm text-nautilus-slate/60 mb-4">
-                            Or reach out directly via:
+                        <p className="text-center text-nautilus-slate/70 mb-6 font-medium">
+                            Prefer direct contact?
                         </p>
                         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                            <Button asChild variant="outline" className="w-full md:w-auto">
-                                <a href={COMPANY.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
-                                    <MessageSquare className="w-4 h-4 mr-2" />
-                                    WhatsApp: {COMPANY.contact.whatsapp}
+                            <Button asChild variant="outline" size="lg" className="w-full md:w-auto">
+                                <a href={COMPANY.contact.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                    <MessageSquare className="w-5 h-5 mr-2" />
+                                    <span>WhatsApp: {COMPANY.contact.whatsapp}</span>
                                 </a>
                             </Button>
-                            <Button asChild variant="outline" className="w-full md:w-auto">
-                                <a href={`mailto:${COMPANY.contact.email}`}>
-                                    <Mail className="w-4 h-4 mr-2" />
-                                    {COMPANY.contact.email}
+                            <Button asChild variant="outline" size="lg" className="w-full md:w-auto">
+                                <a href={`mailto:${COMPANY.contact.email}`} className="flex items-center">
+                                    <Mail className="w-5 h-5 mr-2" />
+                                    <span>{COMPANY.contact.email}</span>
                                 </a>
                             </Button>
                         </div>

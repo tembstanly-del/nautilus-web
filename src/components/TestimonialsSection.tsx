@@ -8,15 +8,15 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah M.",
-    role: "Pharmacy Graduate Student",
+    role: "BPharm Graduate Student",
     text: "Stanley's guidance was invaluable for my thesis. He helped me refine my methodology and taught me SPSS from scratch. I defended successfully and learned skills I'll use throughout my career.",
     achievement: "Defended with Distinction",
   },
   {
-    name: "Green Health Initiative",
-    role: "NGO, Lusaka",
-    text: "Nautilus helped us secure a $50K grant with a compelling proposal. The research design and data analysis were thorough and professional. Stanley understands both the technical and narrative sides of proposals.",
-    achievement: "Grant Approved",
+    name: "David L.",
+    role: "MBChB Student",
+    text: "Working with Stanley transformed my research proposal. His expertise in medical research methodology and statistical analysis helped me design a robust study. The examiners were impressed.",
+    achievement: "Proposal Approved",
   },
   {
     name: "James K.",
@@ -25,10 +25,10 @@ const testimonials = [
     achievement: "Completed in 2 Weeks",
   },
   {
-    name: "MedSupply Ltd.",
-    role: "Healthcare Company",
-    text: "We needed tender documentation for medical equipment procurement. Nautilus delivered a compliant, professional submission on a tight deadline. Their attention to detail made all the difference.",
-    achievement: "Tender Won",
+    name: "Mercy C.",
+    role: "Masters Student, Public Health",
+    text: "Stanley's one-on-one sessions were exactly what I needed. He guided me through complex statistical concepts and helped me present my findings clearly. I couldn't have done it without him.",
+    achievement: "Thesis Defended Successfully",
   },
 ];
 

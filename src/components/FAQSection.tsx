@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "How much do your services cost?",
     answer:
-      "Pricing varies based on project scope and complexity. For students, thesis guidance typically starts at $50/hour or fixed project rates. For organizations, we offer customized packages. Contact us for a free 15-minute consultation and personalized quote.",
+      "Pricing is based on project scope and complexity, typically around ZMW 1,500 per project with justifiable adjustments depending on your specific needs. Every project is unique, so we provide transparent, fair quotes during your free 15-minute consultation.",
   },
   {
     question: "What's the typical turnaround time?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Do you offer refunds or revisions?",
     answer:
-      "Yes! We offer unlimited revisions until you're satisfied (within project scope). If we can't meet agreed-upon standards, we provide full refunds. Your satisfaction and academic integrity are our priorities.",
+      "We offer unlimited revisions until you're satisfied (within project scope). Refunds are subject to consideration based on the specific circumstances. Your satisfaction and academic integrity are our priorities.",
   },
   {
     question: "Can you help with urgent/last-minute projects?",
