@@ -77,8 +77,8 @@ export default function ServicesGrid() {
                             >
                                 <CardHeader>
                                     <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-12 h-12 rounded-full bg-nautilus-shell-pale flex items-center justify-center group-hover:bg-nautilus-shell-primary group-hover:text-white transition-all duration-300">
-                                            <Icon className="w-6 h-6 text-nautilus-shell-primary group-hover:text-white transition-colors" />
+                                        <div className="w-12 h-12 rounded-full bg-nautilus-shell-pale flex items-center justify-center group-hover:bg-nautilus-shell-primary group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                                            <Icon className="w-6 h-6 text-nautilus-shell-primary group-hover:text-white transition-all duration-300 group-hover:scale-110" />
                                         </div>
                                         <CardTitle className="text-nautilus-shell-deep group-hover:text-nautilus-slate transition-colors">
                                             For {service.target}
@@ -91,8 +91,8 @@ export default function ServicesGrid() {
                             <CardContent>
                                 <ul className="space-y-3">
                                     {service.items.map((item) => (
-                                        <li key={item} className="flex items-start text-nautilus-slate/80">
-                                            <span className="w-1.5 h-1.5 bg-nautilus-shell-primary rounded-full mr-3 mt-2 flex-shrink-0" />
+                                        <li key={item} className="flex items-start text-nautilus-slate/80 hover:text-nautilus-slate transition-colors duration-200 hover:translate-x-1">
+                                            <span className="w-1.5 h-1.5 bg-nautilus-shell-primary rounded-full mr-3 mt-2 flex-shrink-0 transition-transform duration-200 hover:scale-150" />
                                             <span>{item}</span>
                                         </li>
                                     ))}

@@ -50,7 +50,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28">
+        <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28 texture-watercolor">
             <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                 {/* Abstract Golden Ratio / Nautilus Spiral */}
                 <svg

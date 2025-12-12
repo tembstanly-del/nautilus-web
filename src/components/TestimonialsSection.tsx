@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-nautilus-cream">
+    <section ref={sectionRef} className="py-24 px-6 bg-nautilus-cream texture-paper">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif text-nautilus-slate mb-4">

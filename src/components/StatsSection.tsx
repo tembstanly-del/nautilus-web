@@ -93,7 +93,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-6 bg-nautilus-slate text-white relative overflow-hidden"
+      className="py-20 px-6 bg-nautilus-slate text-white relative overflow-hidden texture-dots"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
