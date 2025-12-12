@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { COMPANY } from "@/app/constants";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 

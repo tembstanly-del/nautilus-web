@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
             What Clients Say
           </h2>
           <p className="text-nautilus-slate/70 max-w-2xl mx-auto">
-            Real feedback from students and organizations we've helped succeed
+            Real feedback from students and organizations we&apos;ve helped succeed
           </p>
         </div>
 

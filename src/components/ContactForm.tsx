@@ -36,7 +36,7 @@ export default function ContactForm() {
             } else {
                 setSubmitStatus("error");
             }
-        } catch (error) {
+        } catch {
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);
@@ -61,7 +61,7 @@ export default function ContactForm() {
                             <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                             <div>
                                 <p className="font-medium text-green-900">Message sent successfully!</p>
-                                <p className="text-sm text-green-700 mt-1">We'll get back to you within 24 hours.</p>
+                                <p className="text-sm text-green-700 mt-1">We&apos;ll get back to you within 24 hours.</p>
                             </div>
                         </div>
                     )}
