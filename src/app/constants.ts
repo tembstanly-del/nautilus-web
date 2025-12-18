@@ -98,4 +98,31 @@ export const SERVICES = [
       },
     ],
   },
+  {
+    target: "Organizations",
+    quote: VALUE_PROPS.organizations.quote,
+    narrative: "You need a situational analysis, a baseline study, a tender response, a policy brief. You need it rigorous enough to withstand scrutiny and clear enough that decision-makers actually read it.\n\nYou could hire a research firm (expensive, slow), assemble freelancers (coordination nightmare), or task an internal team (they have day jobs).\n\nOr you could work with one generalist who handles research design, data collection oversight, analysis, and writing—all under one roof.",
+    items: [
+      {
+        title: "Research Design",
+        description: "Study protocols, sampling frameworks, data collection instruments. Built to answer your actual question.",
+      },
+      {
+        title: "Data Analysis & Visualization",
+        description: "From raw data to insights. Clear charts, defensible statistics, interpretations that inform decisions.",
+      },
+      {
+        title: "Technical Writing",
+        description: "Reports, proposals, briefs. Academic rigor without academic jargon.",
+      },
+      {
+        title: "Tender Preparation",
+        description: "Compliance matrices, technical proposals, pricing schedules. I've seen what wins and what gets disqualified on page two.",
+      },
+      {
+        title: "Literature Reviews",
+        description: "Systematic, scoping, narrative. Properly structured, properly cited.",
+      },
+    ],
+  },
 ];
