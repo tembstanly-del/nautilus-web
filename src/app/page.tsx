@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 import StatsSection from "@/components/StatsSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProcessSection from "@/components/ProcessSection";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="bg-nautilus-cream min-h-screen">
       <HeroSection />
+      <AboutSection />
       <StatsSection />
       <ServicesGrid />
       <ProcessSection />

@@ -3,52 +3,20 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const examples = [
   {
-    type: "Thesis Methodology",
-    before: {
-      title: "Before",
-      problems: [
-        "Vague research question",
-        "Unclear sampling method",
-        "No justification for approach",
-        "Missing ethical considerations",
-      ],
-    },
-    after: {
-      title: "After",
-      improvements: [
-        "Specific, defensible research question",
-        "Justified sampling with calculations",
-        "Clear methodology rationale",
-        "Complete ethical clearance documentation",
-      ],
-    },
-    result: "Successfully defended with examiner praise",
+    type: "The Methodology Rewrite",
+    story: "A BPharm student came to me with a methodology chapter rejected twice. The research question was vague, the sampling made no sense, and the supervisor had lost patience.",
+    action: "We rebuilt from the ground up: sharpened the research question, justified the sampling with actual calculations, documented the ethical considerations. Three weeks of focused work.",
+    result: "Defended successfully. Examiner specifically praised the methodology section.",
   },
   {
-    type: "Grant Proposal",
-    before: {
-      title: "Before",
-      problems: [
-        "Generic problem statement",
-        "Weak budget justification",
-        "Missing implementation timeline",
-        "No sustainability plan",
-      ],
-    },
-    after: {
-      title: "After",
-      improvements: [
-        "Data-backed, specific problem analysis",
-        "Detailed, itemized budget with quotes",
-        "Gantt chart with clear milestones",
-        "3-year sustainability strategy",
-      ],
-    },
-    result: "Grant proposal approved on first submission",
+    type: "The Statistics Rescue",
+    story: "A Masters student in Public Health had collected data but frozen at analysis. Six weeks until submission. The SPSS file was a mess. She'd never run anything beyond descriptive statistics.",
+    action: "We cleaned the dataset, identified the right tests (she needed chi-square and binary logistic regression, not the ANOVA she'd planned), ran the analysis together so she understood every step.",
+    result: "Completed with two weeks to spare. Successfully defended.",
   },
 ];
 
@@ -103,74 +71,38 @@ export default function BeforeAfterSection() {
         <div className="space-y-12">
           {examples.map((example, index) => (
             <div key={index} data-comparison className="opacity-0">
-              <h3 className="text-xl font-serif text-nautilus-slate mb-6 text-center">
-                {example.type}
-              </h3>
+              <Card className="border-l-4 border-nautilus-shell-primary">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-serif text-nautilus-slate mb-6">
+                    {example.type}
+                  </h3>
 
-              <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-start">
-                {/* Before */}
-                <Card className="border-2 border-red-200 bg-red-50/50">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <XCircle className="w-5 h-5 text-red-600" />
-                      <h4 className="font-semibold text-red-900">
-                        {example.before.title}
-                      </h4>
+                  <div className="space-y-6">
+                    <div className="bg-nautilus-cream-dark/30 p-6 rounded-lg">
+                      <p className="text-nautilus-slate/80 leading-relaxed">
+                        {example.story}
+                      </p>
                     </div>
-                    <ul className="space-y-2">
-                      {example.before.problems.map((problem, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-red-800"
-                        >
-                          <span className="text-red-500 mt-1">✗</span>
-                          <span>{problem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
 
-                {/* Arrow */}
-                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-nautilus-shell-primary rounded-full items-center justify-center shadow-lg z-10">
-                  <ArrowRight className="w-6 h-6 text-white" />
-                </div>
-
-                {/* After */}
-                <Card className="border-2 border-green-200 bg-green-50/50">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <CheckCircle2 className="w-5 h-5 text-green-600" />
-                      <h4 className="font-semibold text-green-900">
-                        {example.after.title}
-                      </h4>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="w-5 h-5 text-nautilus-shell-primary mt-1 flex-shrink-0" />
+                      <p className="text-nautilus-slate/80 leading-relaxed">
+                        {example.action}
+                      </p>
                     </div>
-                    <ul className="space-y-2">
-                      {example.after.improvements.map((improvement, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-green-800"
-                        >
-                          <span className="text-green-500 mt-1">✓</span>
-                          <span>{improvement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
 
-              {/* Result */}
-              <div className="mt-4 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-nautilus-shell-pale rounded-full">
-                  <span className="text-sm font-medium text-nautilus-shell-deep">
-                    Result:
-                  </span>
-                  <span className="text-sm text-nautilus-slate">
-                    {example.result}
-                  </span>
-                </div>
-              </div>
+                    <div className="bg-green-50/50 border border-green-200 p-6 rounded-lg">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-green-900">Result: </span>
+                          <span className="text-green-800 italic">{example.result}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           ))}
         </div>

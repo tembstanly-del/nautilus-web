@@ -9,20 +9,20 @@ const testimonials = [
   {
     name: "Sarah M.",
     role: "BPharm Graduate Student",
-    text: "Stanley's guidance was invaluable for my thesis. He helped me refine my methodology and taught me SPSS from scratch. I defended successfully and learned skills I'll use throughout my career.",
+    text: "I was three weeks from submission with a methodology chapter my supervisor had rejected twice. Stanley rebuilt it with me from scratch—not just fixing it, but explaining why each choice mattered. I went into my defense actually understanding my own research.",
     achievement: "Defended with Distinction",
+  },
+  {
+    name: "James K.",
+    role: "Computer Science Graduate",
+    text: "My SPSS output looked like hieroglyphics. Stanley didn't just run the tests for me—he sat with me until I understood what a p-value actually means and why my confidence intervals mattered. I use those skills now in my job.",
+    achievement: "Analysis completed in 2 weeks",
   },
   {
     name: "David L.",
     role: "MBChB Student",
     text: "Working with Stanley transformed my research proposal. His expertise in medical research methodology and statistical analysis helped me design a robust study. The examiners were impressed.",
     achievement: "Proposal Approved",
-  },
-  {
-    name: "James K.",
-    role: "Computer Science Student",
-    text: "I was stuck on my data analysis for weeks. Stanley not only helped me complete it but explained every step so I understood my own research. Worth every kwacha!",
-    achievement: "Completed in 2 Weeks",
   },
   {
     name: "Mercy C.",

@@ -8,30 +8,30 @@ const steps = [
   {
     icon: Calendar,
     number: "01",
-    title: "Free Consultation",
+    title: "We Talk (Free)",
     description:
-      "15-minute call to understand your needs, timeline, and goals. No obligation—just honest guidance on the best approach.",
+      "A 15-minute call where you tell me what's going on. No pitch, no pressure. I'll give you honest guidance—even if that guidance is \"you don't need me, here's what to do yourself.\" If we're a fit, I'll tell you. If you need something I can't provide, I'll tell you that too.",
   },
   {
     icon: FileCheck,
     number: "02",
-    title: "Proposal & Agreement",
+    title: "You Get a Clear Proposal",
     description:
-      "Clear scope, timeline, and fixed pricing. You know exactly what to expect before we start. Transparent and straightforward.",
+      "Fixed scope. Fixed price. Fixed timeline. You'll know exactly what you're getting before we start—no hourly billing surprises, no scope creep charges. I'll also tell you what I need from you and when I need it. This only works if we're both clear.",
   },
   {
     icon: Users,
     number: "03",
-    title: "Collaborative Work",
+    title: "We Work Together",
     description:
-      "Regular updates, your feedback incorporated at every stage. You're involved as much or as little as you prefer.",
+      "I don't disappear into a black box. You get regular updates. Your feedback shapes the work. You're involved as much or as little as you want—but you always know where things stand.",
   },
   {
     icon: Rocket,
     number: "04",
-    title: "Delivery & Support",
+    title: "You Get Deliverables That Work",
     description:
-      "Final deliverables with documentation and explanations. Post-project support for revisions and questions included.",
+      "Final outputs with documentation. I explain what I did and why, so you can defend it (if it's academic) or build on it (if it's organizational). Post-delivery support included. Questions come up—I'll be there.",
   },
 ];
 

@@ -74,25 +74,28 @@ export const SERVICES = [
   {
     target: "Students",
     quote: VALUE_PROPS.students.quote,
+    narrative: "You're smart enough to be here. But somewhere between the research question and the final draft, things got tangled. The methodology chapter keeps getting sent back. The statistics feel like a foreign language. Your supervisor's feedback is vague. The deadline is real.\n\nI've been in that room with dozens of students. Here's what I've learned: the problem is rarely that you're not capable. It's that no one showed you the structure.",
     items: [
-      "Thesis Design & Supervision",
-      "Research Methodology",
-      "Data Analysis (R, SPSS, Excel, Python)",
-      "One-on-One Tutoring",
-      "Programming Tutoring",
-      "CV Design",
-    ],
-  },
-  {
-    target: "Organizations",
-    quote: VALUE_PROPS.organizations.quote,
-    items: [
-      "Research Design",
-      "Data Analysis",
-      "Technical Writing",
-      "Tender Preparation",
-      "Literature Review",
-      "CV & Profile Development",
+      {
+        title: "Thesis Design & Supervision",
+        description: "From refining your research question to defending your methodology choices. I'll push back like a good supervisor should.",
+      },
+      {
+        title: "Research Methodology",
+        description: "Sampling strategies, study designs, ethical clearance applications. The \"why\" behind every choice, so you can defend it.",
+      },
+      {
+        title: "Data Analysis",
+        description: "R, SPSS, Excel, Python. Not just running the tests—understanding what your results actually mean and how to present them.",
+      },
+      {
+        title: "One-on-One Tutoring",
+        description: "Statistics, research methods, programming fundamentals. We go at your pace until it clicks.",
+      },
+      {
+        title: "The Panic Package",
+        description: "You have two weeks, a mess of data, and a deadline. We triage, prioritize, and get you across the line.",
+      },
     ],
   },
 ];

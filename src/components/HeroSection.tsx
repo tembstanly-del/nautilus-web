@@ -88,31 +88,31 @@ export default function HeroSection() {
                         {COMPANY.latinTagline}
                     </h2>
                     <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-nautilus-slate leading-tight opacity-0">
-                        Structure. Wisdom. <br />
-                        <span className="italic text-nautilus-shell-primary">Synthesis.</span>
+                        From confusion to defended. <br />
+                        <span className="italic text-nautilus-shell-primary">From scattered data to clear answers.</span>
                     </h1>
                 </div>
 
                 <p
                     ref={descRef}
-                    className="text-lg md:text-xl text-nautilus-slate/70 max-w-2xl mx-auto font-sans font-light leading-relaxed opacity-0"
+                    className="text-lg md:text-xl text-nautilus-slate/70 max-w-3xl mx-auto font-sans font-light leading-relaxed opacity-0"
                 >
-                    Expert research consultancy integrating analysis, methodology, and academic writing.
+                    You have a deadline, a dataset you don&apos;t fully understand, and a supervisor who keeps asking for &ldquo;more rigor.&rdquo;
                     <br />
                     <span className="block mt-4 text-base md:text-lg">
-                        Rigorous thinking across disciplines for students and professionals who demand excellence.
+                        I help students finish what they started—and get answers without hiring five specialists.
                     </span>
                 </p>
 
                 <div ref={btnRef} className="flex flex-col sm:flex-row gap-4 justify-center opacity-0">
                     <Button asChild size="lg">
                         <a href="#contact">
-                            Get Started Free
+                            Book a Free 15-Minute Call
                         </a>
                     </Button>
                     <Button asChild size="lg" variant="outline">
                         <a href="#services">
-                            View Services
+                            See How It Works
                         </a>
                     </Button>
                 </div>
