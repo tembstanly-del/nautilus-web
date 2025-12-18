@@ -12,39 +12,39 @@ import { fadeInUp } from "@/lib/gsap-animations";
 
 const faqs = [
   {
-    question: "How much do your services cost?",
+    question: "What does this actually cost?",
     answer:
-      "Pricing is based on project scope and complexity, typically around ZMW 1,500 per project with justifiable adjustments depending on your specific needs. Every project is unique, so we provide transparent, fair quotes during your free 15-minute consultation.",
+      "It depends on scope. A focused 2-hour consultation might be K300. A full thesis methodology overhaul could be K2,500-5,000. A complete tender response might be K8,000-15,000. I quote fixed prices after our initial conversation. No hourly billing, no surprises.",
   },
   {
-    question: "What's the typical turnaround time?",
+    question: "How fast can you turn things around?",
     answer:
-      "Timeline depends on the project. Thesis chapters typically take 1-2 weeks, complete thesis design 4-8 weeks, and data analysis 3-7 days. We work with your deadlines and provide realistic timelines during consultation.",
+      "Standard projects: 1-3 weeks depending on complexity. Rush jobs: Often possible, but I'll be honest if your timeline is unrealistic. I'd rather tell you upfront than over-promise and under-deliver.",
   },
   {
-    question: "What software/tools do you use for data analysis?",
+    question: "What tools do you use?",
     answer:
-      "We're proficient in SPSS, R, Python, and Excel. We choose the best tool for your specific needs and can work with your preferred software. All analysis includes clear interpretation and visualization.",
-  },
-  {
-    question: "Do you offer refunds or revisions?",
-    answer:
-      "We offer unlimited revisions until you're satisfied (within project scope). Refunds are subject to consideration based on the specific circumstances. Your satisfaction and academic integrity are our priorities.",
-  },
-  {
-    question: "Can you help with urgent/last-minute projects?",
-    answer:
-      "We accommodate rush projects when possible, though we recommend starting early for best results. Contact us immediately to discuss your timeline—we'll be honest about what's achievable.",
-  },
-  {
-    question: "How do sessions work? Online or in-person?",
-    answer:
-      "We primarily work online via Zoom, WhatsApp, or Google Meet for flexibility. For clients in Lusaka, in-person meetings can be arranged. All materials are shared digitally for your convenience.",
+      "Statistical analysis: R (tidyverse), SPSS, Excel, Python. Documents: Quarto, LaTeX, Word (whatever your institution requires). Visualization: ggplot2, Excel charts, custom graphics. Project management: Notion, WhatsApp for quick communication. I match tools to the task—not the other way around.",
   },
   {
     question: "What if I'm not sure what I need?",
     answer:
-      "That's exactly why we offer a free 15-minute consultation! We'll discuss your goals, assess your needs, and recommend the best approach. No obligation—just honest guidance.",
+      "That's what the free consultation is for. Tell me where you are and where you need to get. I'll help you figure out what's actually required—even if that means pointing you to free resources instead of hiring me.",
+  },
+  {
+    question: "Can you help with urgent/last-minute projects?",
+    answer:
+      "Usually, yes. I've pulled students back from the edge more than once. But \"urgent\" costs more than \"planned,\" and some timelines genuinely can't be rescued. Book a call. Be honest about your deadline. I'll be honest about what's possible.",
+  },
+  {
+    question: "Do you do the work *for* students, or *with* them?",
+    answer:
+      "With them. I'll guide, review, explain, and push back—but the thinking has to be yours. You need to understand your own research well enough to defend it. That said, I'm not going to watch you drown. If you're stuck, I'll help you get unstuck. The goal is a defended thesis *and* skills you keep afterward.",
+  },
+  {
+    question: "How do sessions work? Online or in-person?",
+    answer:
+      "Primarily online via Zoom, WhatsApp, or Google Meet for flexibility. For clients in Lusaka, in-person meetings can be arranged. All materials are shared digitally for your convenience.",
   },
 ];
 
